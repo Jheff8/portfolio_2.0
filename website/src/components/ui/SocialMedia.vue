@@ -37,7 +37,7 @@ export default {
 </script>
 <style scoped>
 .social-media-container{
-  position: absolute;
+  position: fixed;
   left: 25px;
   top: 50%;
   transform: translate(-50%, -50%);
