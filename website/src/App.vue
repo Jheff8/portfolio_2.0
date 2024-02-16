@@ -1,21 +1,29 @@
 <template>
   <the-header></the-header>
-  <main>
-    <router-view></router-view>
-  </main>
   <aside>
     <social-media></social-media>
   </aside>
+  <main>
+    <!-- <router-view></router-view> -->
+    <home-section></home-section>
+  </main>
+  <section>
+    <about-section></about-section>
+  </section>
 </template>
 
 <script>
 import TheHeader from './components/ui/TheHeader.vue'
 import SocialMedia from './components/ui/SocialMedia.vue'
+import HomeSection from './components/sections/HomeSection.vue'
+import AboutSection from './components/sections/AboutSection.vue'
 
 export default {
   components: {
     TheHeader,
-    SocialMedia
+    SocialMedia,
+    HomeSection,
+    AboutSection
   }
 }
 </script>
@@ -33,6 +41,14 @@ body {
   background-attachment: fixed;
   color: #fff;
 }
+main, section{
+  height: 100vh;
+}
+section{
+  position: relative;
+  display: grid;
+  place-content: center;
+}
 
 /* global classes */
 .text-color {
@@ -41,12 +57,15 @@ body {
 .body-text{
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.5;
 }
 .title{
   font-size: 52px;
   font-weight: 900;
+  line-height: 1.3;
   text-transform: capitalize;
 }
+
 .subtitle{
   font-size: 33.5px;
   font-weight: 100;
